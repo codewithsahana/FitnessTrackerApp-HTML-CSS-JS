@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitHub User Profile</title>
+    <link rel="stylesheet" href="user.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1>FitHub</h1>
+        <nav>
+          <ul>
+            <li><span id="username"></span></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li><a href="#login-signup" onclick="logout()" id="logout-btn">Logout</a></li> -->
+            <li><a href="#login-signup"  onclick="logout()">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <h3>Welcome to FitHub</h3>
+      <main>
+        <!-- User Details Section -->
+        <p id="session-status"></p>
+<section id="user-details">
+<h2>User Details</h2>
+<form>
+<label for="weight">Weight (kg):</label>
+<input type="number" id="weight" name="weight">
+<label for="height">Height (cm):</label>
+<input type="number" id="height" name="height">
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob">
+<label for="gender">Gender:</label>
+<select id="gender" name="gender">
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+<button type="button" onclick="saveUserDetails()">Save Details</button>
+</form>
+</section>
+<!-- Nutrition Tracking Section -->
+<section id="nutrition-tracking">
+<h2>Nutrition Tracking</h2>
+<form id="meal-form">
+<label for="meal">Meal:</label>
+<input type="text" id="meal" name="meal" required>
+<label for="calories">Calories:</label>
+<input type="number" id="calories" name="calories" required>
+<button type="submit">Track Meal</button>
+</form>
+<div id="meal-list">
+<h3>Meals Tracked:</h3>
+<ul></ul>
+</div>
+<div id="calorie-total">
+<h3>Total Calories: <span id="total-calories">0</span></h3>
+</div>
+</section>
+<!-- Workout Tracking Section -->
+<section id="workout-tracking">
+<h2>Workout Tracking</h2>
+<form id="workout-form" >
+<label for="workout-day">Day:</label>
+<input type="date" id="workout-day" name="workout-day" required>
+<label for="workout-type">Type of Workout:</label>
+<input type="text" id="workout-type" name="workout-type" required>
+<label for="workout-hours">Hours Worked Out:</label>
+<input type="number" id="workout-hours" name="workout-hours" step="0.1" required>
+<label for="calories-burnt">Calories Burnt:</label>
+<input type="number" id="calories-burnt" name="calories-burnt" required>
+<button type="submit">Track Workout</button>
+</form>
+<div id="workout-list">
+<h3>Workouts Tracked:</h3>
+<ul></ul>
+</div>
+</section>
+<!-- Goal Setting Section -->
+<section id="goal-setting">
+<h2>Set Your Goals</h2>
+<form id="goal-form" >
+<label for="weightlifting-goal">Weightlifting Goal (kg):</label>
+<input type="number" id="weightlifting-goal" name="weightlifting-goal" required>
+<label for="weight-goal">Weight Gain/Loss Goal (kg):</label>
+<input type="number" id="weight-goal" name="weight-goal" required>
+<button type="submit">Set Goals</button>
+</form>
+<div id="goal-list">
+<h3>Current Goals:</h3>
+<ul>
+<li id="current-weightlifting-goal">Weightlifting Goal: Not set</li>
+<li id="current-weight-goal">Weight Gain/Loss Goal: Not set</li>
+</ul>
+</div>
+</section>
+<!-- Progress Analysis Section -->
+<section id="progress-analysis">
+<h2>Log Your Progress</h2>
+<form id="progress-form" >
+<label for="progress-date">Date:</label>
+<input type="date" id="progress-date" name="progress-date" required>
+<label for="weight-change">Weight Change (kg):</label>
+<input type="number" id="weight-change" name="weight-change" step="0.1" required>
+<label for="weightlifting-number">Weight Lifting (kg):</label>
+<input type="number" id="weightlifting-number" name="weightlifting-number" required>
+<label for="body-weight-reps">Body Weight Reps:</label>
+<input type="number" id="body-weight-reps" name="body-weight-reps" required>
+<label for="hours-workout">Hours Worked Out:</label>
+<input type="number" id="hours-workout" name="hours-workout" step="0.1" required>
+<label for="cardio-done">Cardio Done (minutes):</label>
+<input type="number" id="cardio-done" name="cardio-done" required>
+<button type="submit">Genarate Your Monthly Report</button>
+</form>
+<!-- <div id="progress-list">
+<h3>Progress Tracked:</h3>
+<ul></ul>
+</div> -->
+
+</section>
+
+</section>
+</main>
+<footer id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Email: support@fithub.com</p>
+        <p>Phone: (123) 456-7890</p>
+      </div>
+    </footer>
+    <script src="user.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </body>
+</html>
