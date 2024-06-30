@@ -6,20 +6,7 @@ window.onload = function () {
     document.getElementById("username").textContent = username;
   }
 };
-// Function to reset the logout timer
-function resetLogoutTimer() {
-  clearTimeout(logoutTimer);
-  logoutTimer = setTimeout(logout, 300000); // 300,000 ms = 5 minutes
-}
-// Event listener for the logout button
-logoutButton.addEventListener("click", logout);
-// Event listeners for user activity
-document.addEventListener("mousemove", resetLogoutTimer);
-document.addEventListener("keypress", resetLogoutTimer);
-document.addEventListener("scroll", resetLogoutTimer);
-document.addEventListener("click", resetLogoutTimer);
-// Initial setup of the logout timer
-resetLogoutTimer();
+
 function logout() {
   localStorage.removeItem("loggedIn");
   localStorage.removeItem("username");
