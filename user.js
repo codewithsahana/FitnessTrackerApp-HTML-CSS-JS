@@ -12,7 +12,7 @@ function logout() {
   localStorage.removeItem("username");
   window.location.href = "index.html";
 }
-// // Warn the user when they try to navigate away from the page
+// Warn the user when they try to navigate away from the page
 window.addEventListener("beforeunload", (event) => {
   event.preventDefault();
   event.returnValue = "";
